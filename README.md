@@ -1,6 +1,5 @@
-## Dynamically discover and import Python modules and classes
+## Dynamically discover and import Python modules, classes, and functions.
 
-## [Importers](/dynamic_imports/importers.py)
 ### Import a module via module name or file path
 ```python
 from dynamic_imports import import_module
@@ -16,9 +15,6 @@ function = import_module_attr('my_package.my_module', 'my_function')
 # or
 function = import_module_attr('/home/user/my_package/my_module.py', 'my_function')
 ```
-
-
-## [Search](/dynamic_imports/search.py)
 ### Find all modules in a package or nested packages
 ```python
 from dynamic_imports import discover_modules
@@ -31,7 +27,6 @@ modules = discover_modules(
 )
 
 ```
-
 ### Find all implementations of a base class within a module.
 ```python
 from dynamic_imports import class_impls
@@ -44,7 +39,6 @@ my_classes = class_impls(
     names_only=False
 )
 ```
-
 ### Find all implementations of a base class within a package.
 ```python
 from dynamic_imports import class_impls
@@ -59,7 +53,6 @@ my_classes = class_impls(
 )
 
 ```
-
 ### Find all instances of a class within a module.
 ```python
 from dynamic_imports import class_inst
@@ -71,7 +64,6 @@ my_classes_instances = class_inst(
     class_type=MyClass
 )
 ```
-
 ### Find all instances of a class within a package.
 ```python
 from dynamic_imports import class_inst
