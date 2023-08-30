@@ -1,5 +1,9 @@
-## Dynamically discover and import Python modules, classes, and functions.
+# Dynamically discover and import Python modules, classes, and functions.
 
+## Install
+`pip install dynamic_imports`
+
+## Examples
 ### Import a module via module name or file path
 ```python
 from dynamic_imports import import_module
