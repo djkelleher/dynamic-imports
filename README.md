@@ -39,7 +39,7 @@ my_classes = class_impls(
     names_only=False
 )
 ```
-### Find all implementations of a base class within a package.
+### Find all implementations of a base class within nested packages.
 ```python
 from dynamic_imports import class_impls
 from my_package.my_module import Base
@@ -64,7 +64,7 @@ my_classes_instances = class_inst(
     class_type=MyClass
 )
 ```
-### Find all instances of a class within a package.
+### Find all instances of a class within nested packages.
 ```python
 from dynamic_imports import class_inst
 from my_package.my_module import MyClass
