@@ -24,7 +24,7 @@ function = import_module_attr('/home/user/my_package/my_module.py', 'my_function
 from dynamic_imports import discover_modules
 
 modules = discover_modules(
-    module=my_package, # str `my_package' works too.
+    package=my_package, # str `my_package' works too.
     search_subpackages=True,
     # return the actual module objects, not str names.
     names_only=False,
