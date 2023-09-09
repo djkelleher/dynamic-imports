@@ -1,4 +1,3 @@
-import importlib
 import pkgutil
 import pyclbr
 from pathlib import Path
@@ -25,7 +24,7 @@ def discover_modules(
     """
     if isinstance(package, str):
         # import the package.
-        package = importlib.import_module(package)
+        package = import_module(package)
     if package.__package__ != package.__name__:
         # `package` is a module, not a package.
         return [package] if not names_only else [package.__name__]
