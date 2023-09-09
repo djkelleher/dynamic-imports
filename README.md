@@ -29,8 +29,8 @@ modules = discover_modules(
     # return the actual module objects, not str names.
     names_only=False,
 )
-
 ```
+The `search_in` argument for all functions below can be an imported package or module, string name of the package (e.g. `my_package`) or module (e.g. `my_package.my_module`), or path to a python file (e.g. `/home/user/my_package/my_module.py`)
 ### Find all implementations of a base class within a module.
 ```python
 from dynamic_imports import class_impls
@@ -64,7 +64,7 @@ from my_package import my_module
 from my_package.my_module import MyClass
 
 my_classes_instances = class_inst(
-    search_in=my_module, # str 'my_package.my_module' works too.
+    search_in=my_module,
     class_type=MyClass
 )
 ```
@@ -76,7 +76,7 @@ import my_package
 
 my_classes_instances = class_inst(
     class_type=MyClass,
-    search_in=my_package, # str 'my_package' works too.
+    search_in=my_package,
     search_subpackages=True,
 )
 ```
