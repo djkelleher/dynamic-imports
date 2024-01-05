@@ -2,7 +2,7 @@ import pkgutil
 import pyclbr
 from pathlib import Path
 from types import ModuleType
-from typing import List, Union
+from typing import Any, List, Union
 
 from .importers import import_module
 
@@ -46,7 +46,7 @@ def class_impls(
     search_in: Union[ModuleType, str],
     search_subpackages: bool = True,
     names_only: bool = False,
-) -> Union[List[str], List[ModuleType]]:
+) -> Union[List[str], List[Any]]:
     """Find all implementations of a base class within a module or package.
 
     Args:
@@ -56,7 +56,7 @@ def class_impls(
         names_only (bool, optional): Return class names. Defaults to False.
 
     Returns:
-        Union[List[str], List[ModuleType]]: The discovered classes or class names.
+        Union[List[str], List[Any]]: The discovered classes or class names.
     """
     _class_impls = []
     for module in discover_modules(search_in, search_subpackages, names_only):

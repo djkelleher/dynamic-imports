@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dynamic-imports"
-version = "1.0.1"
+version = "1.0.2"
 description = "Dynamically discover and import Python modules, classes, and functions."
 authors = ["Dan Kelleher <kelleherjdan@gmail.com>"]
 license = "MIT"
