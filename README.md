@@ -27,7 +27,7 @@ modules = discover_modules(
     package=my_package, # str `my_package' works too.
     search_subpackages=True,
     # return the actual module objects, not str names.
-    names_only=False,
+    names_only=False # this is the default value...
 )
 ```
 The `search_in` argument for all functions below can be an imported package or module, string name of the package (e.g. `"my_package"`) or module (e.g. `"my_package.my_module"`), or path to a python file (e.g. `"/home/user/my_package/my_module.py"`)
@@ -40,7 +40,7 @@ from my_package import my_module
 my_classes = class_impls(
     base_class=Base, # str 'Base' works too
     search_in=my_module,
-    names_only=False
+    names_only=False # this is the default value...
 )
 ```
 ### Find all implementations of a base class within nested packages.
@@ -53,7 +53,7 @@ my_classes = class_impls(
     base_class=Base, # str 'Base' works too.
     search_in=my_package
     search_subpackages=True,
-    names_only=False,
+    names_only=False # this is the default value...
 )
 
 ```

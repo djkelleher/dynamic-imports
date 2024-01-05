@@ -17,7 +17,7 @@ def discover_modules(
     Args:
         package (Union[ModuleType, str]): Top-level package where search should begin.
         search_subpackages (bool, optional): Search sub-packages within `package`. Defaults to True.
-        names_only (bool, optional): Return module names.
+        names_only (bool, optional): Return module names instead of imported modules. Defaults to False.
 
     Returns:
         Union[List[str], List[ModuleType]]: The discovered modules or module names.
@@ -53,7 +53,7 @@ def class_impls(
         base_class (Union[ModuleType, str]): The base class who's implementations should be searched for.
         search_in (Union[ModuleType, str]): The module or package to search in.
         search_subpackages (bool, optional): Search sub-packages within `package`. Defaults to True.
-        names_only (bool, optional): Return class names. Defaults to False.
+        names_only (bool, optional): Return class names instead of imported classes. Defaults to False.
 
     Returns:
         Union[List[str], List[Any]]: The discovered classes or class names.
